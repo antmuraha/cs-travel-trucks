@@ -1,0 +1,12 @@
+{
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "form_factor": "narrow"
+    }
+  ]
+}
