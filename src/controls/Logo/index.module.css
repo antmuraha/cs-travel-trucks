@@ -1,0 +1,10 @@
+.logo {
+}
+
+.logo .first {
+  fill: var(--Main, #101828);
+}
+
+.logo .last {
+  fill: var(--Text, #475467);
+}

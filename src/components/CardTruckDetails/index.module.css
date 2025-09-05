@@ -1,0 +1,60 @@
+.cardTruckDetails {
+}
+
+.cardTruckImages {
+  flex-shrink: 0;
+  width: 292px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #c5c5c5;
+}
+
+.cardTruckInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardTruckInfoHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cardTruckInfoDetails {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+
+  .iconStar {
+    color: var(--color-star, #ffd700);
+  }
+
+  .iconMap {
+    margin-left: 12px;
+  }
+}
+
+.cardTruckInfoDescription {
+  /* max-width: 520px; */
+  display: block;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  font-weight: 400;
+  color: #475467;
+}
+
+.cardTruckInfoFeatures {
+}
+
+.cardTruckInfoButton {
+  align-self: flex-start;
+  margin-top: auto;
+}

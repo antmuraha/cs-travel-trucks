@@ -41,6 +41,15 @@ export default defineConfig(({ mode }) => {
   };
 
   return {
+    resolve: {
+      alias: {
+        '@constants': path.resolve(__dirname, 'src/constants'),
+        '@layout': path.resolve(__dirname, 'src/layout'),
+        '@hooks': path.resolve(__dirname, 'src/hooks'),
+        '@controls': path.resolve(__dirname, 'src/controls'),
+        '@components': path.resolve(__dirname, 'src/components'),
+      },
+    },
     plugins: [
       react(),
       generateFaviconsPlugin({
@@ -83,7 +92,7 @@ export default defineConfig(({ mode }) => {
         // Disabled by default.
         restoreMissingViewBox: true,
 
-        exclude: ['./icon.svg'],
+        exclude: [],
       }),
       viteStaticCopy({
         targets: [

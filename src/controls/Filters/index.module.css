@@ -1,0 +1,25 @@
+.filters {
+  width: 360px;
+
+  h3 {
+    margin-top: 40px;
+    color: var(--Text, #475467);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  section {
+    margin-top: 32px;
+  }
+
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+
+  .searchButton {
+    margin-top: 40px;
+  }
+}

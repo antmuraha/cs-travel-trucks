@@ -1,0 +1,32 @@
+.catalog-item {
+  margin: 0 auto;
+  padding: 48px 64px 52px;
+  flex-wrap: wrap;
+  gap: 64px;
+}
+
+.item-details {
+  margin-top: 44px;
+  display: flex;
+  gap: 40px;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.details-content {
+  display: grid;
+
+  & > * {
+    grid-area: 1 / 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition-duration) var(--transition-timing-function);
+  }
+
+  .active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}

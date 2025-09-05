@@ -1,0 +1,24 @@
+.catalog {
+  margin: 0 auto;
+  padding: 48px 64px 52px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+}
+
+.catalog-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  & > button {
+    align-self: center;
+  }
+}
+
+.catalog-items {
+  display: grid;
+  gap: 32px;
+  max-width: 888px;
+}

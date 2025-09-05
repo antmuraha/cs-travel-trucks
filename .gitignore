@@ -27,3 +27,6 @@ dist-ssr
 
 mock/
 public/app
+
+*storybook.log
+storybook-static

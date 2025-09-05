@@ -1,0 +1,21 @@
+.inputLocation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-left: 2px;
+    color: var(--Gray, #6c717b);
+    line-height: 24px;
+  }
+
+  input {
+    height: 56px;
+    padding: 18px 20px 18px 48px;
+  }
+
+  .icon {
+    position: absolute;
+    transform: translate(20px, 42px);
+  }
+}

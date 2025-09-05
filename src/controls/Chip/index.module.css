@@ -1,0 +1,17 @@
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 50px;
+  background: var(--Badges, #f2f4f7);
+  font-weight: 500;
+  text-transform: capitalize;
+  mix-blend-mode: multiply;
+
+  border: none;
+  outline: none;
+}
+
+.chip:hover {
+}

@@ -1,0 +1,50 @@
+.squareButton {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 112px;
+  height: 96px;
+  padding: 16px;
+  border-radius: 12px;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid var(--Gray-light, #dadde1);
+  mix-blend-mode: multiply;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    bottom: 0px;
+    left: 0px;
+  }
+}
+
+.squareButton:focus-within {
+  outline: 2px solid black;
+}
+
+.squareButton.active {
+  border: 1px solid var(--Button, #e44848);
+}
+
+.squareButton:has(input[type='checkbox']:checked),
+.squareButton:has(input[type='radio']:checked) {
+  border: 1px solid var(--Button, #e44848);
+}
+
+.squareButton:has(input[type='checkbox']:checked):focus-within,
+.squareButton:has(input[type='radio']:checked):focus-within {
+  outline: 2px solid var(--Button, #e44848);
+}
+
+.squareButton:active,
+.squareButton:hover {
+  background-color: #f2f4f7;
+}

@@ -1,0 +1,35 @@
+.header {
+  top: 0px;
+  position: sticky;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 64px;
+  border-bottom: 1px solid var(--Badges, #f2f4f7);
+  background: var(--Inputs, #f7f7f7);
+
+  nav {
+    display: inline-block;
+  }
+
+  ul {
+    display: flex;
+    gap: 32px;
+    font-weight: 500;
+
+    .active {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-item-home {
+}
+
+.header-nav-item-catalog {
+}

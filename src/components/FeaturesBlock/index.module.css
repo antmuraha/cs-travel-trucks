@@ -1,0 +1,33 @@
+.featuresBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 44px;
+  border-radius: 10px;
+  background: var(--Inputs, #f7f7f7);
+
+  h2 {
+    margin-top: 2rem;
+    font-size: 20px;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  dt {
+    text-align: left;
+  }
+
+  dd {
+    text-align: right;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

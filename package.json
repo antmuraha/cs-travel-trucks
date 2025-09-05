@@ -7,32 +7,50 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "format": "prettier --write \"src/**/*.{ts,js,tsx,css}\"",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "preview-storybook": "pnpm dlx http-server ./storybook-static"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "formik": "^2.4.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-redux": "^9.2.0"
+    "react-redux": "^9.2.0",
+    "react-router": "^7.8.2"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^4.1.1",
     "@eslint/js": "^9.33.0",
+    "@storybook/addon-a11y": "^9.1.4",
+    "@storybook/addon-docs": "^9.1.4",
+    "@storybook/addon-onboarding": "^9.1.4",
+    "@storybook/addon-vitest": "^9.1.4",
+    "@storybook/builder-vite": "^9.1.4",
+    "@storybook/react-vite": "^9.1.4",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
+    "@vitest/browser": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-storybook": "^9.1.4",
     "favicons": "^7.2.0",
     "globals": "^16.3.0",
     "image-size": "^2.0.2",
+    "playwright": "^1.55.0",
+    "storybook": "^9.1.4",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2",
     "vite-plugin-magical-svg": "^1.8.0",
-    "vite-plugin-static-copy": "^3.1.2"
+    "vite-plugin-static-copy": "^3.1.2",
+    "vitest": "^3.2.4"
   },
   "engines": {
     "node": ">=22.12.0"

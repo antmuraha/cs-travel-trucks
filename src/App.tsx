@@ -1,24 +1,25 @@
-import './App.css';
-import { APP_TITLE } from './constants/app';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import routes from '@constants/routes';
+import { Header } from '@layout/Header';
+import { Catalog } from '@layout/Catalog';
+import { CatalogItem } from '@layout/CatalogItem';
+import ViewTransitionWrapper from '@components/ViewTransitionWrapper';
+import { Hero } from '@controls/Hero';
 
-import IconCupHot from './assets/icons/cup-hot.svg?sprite=inline';
-import IconDiagram from './assets/icons/diagram.svg?sprite=owo';
-import IconGrid1x2 from './assets/icons/grid-1x2.svg';
-import IconGrid2x2 from './assets/icons/heart.svg';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <div>
-        <IconCupHot width={32} height={32} />
-        <IconDiagram width={32} height={32} />
-        {/* @ts-ignore */}
-        <IconGrid1x2 width={32} height={32} />
-        {/* @ts-ignore */}
-        <IconGrid2x2 width={32} height={32} />
-      </div>
-      <h1>{APP_TITLE}</h1>
-    </>
+    <BrowserRouter>
+      <Header />
+      <ViewTransitionWrapper>
+        <Routes>
+          <Route path={routes.home()} element={<Hero />} />
+          <Route path={routes.catalog()} element={<Catalog />} />
+          <Route path={routes.catalogItem(':id')} element={<CatalogItem />} />
+        </Routes>
+      </ViewTransitionWrapper>
+    </BrowserRouter>
   );
 }
 

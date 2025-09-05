@@ -21,7 +21,17 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Path aliases */
+    "baseUrl": "./src/",
+    "paths": {
+      "@constants/*": ["constants/*"],
+      "@layout/*": ["layout/*"],
+      "@hooks/*": ["hooks/*"],
+      "@controls/*": ["controls/*"],
+      "@components/*": ["components/*"]
+    }
   },
   "include": ["src", "types"]
 }

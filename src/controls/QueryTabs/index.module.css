@@ -1,0 +1,23 @@
+.queryTabs {
+  display: flex;
+  gap: 40px;
+  color: var(--Main, #101828);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  border-bottom: 1px solid var(--Gray-light, #dadde1);
+}
+
+.queryTab {
+  position: relative;
+  bottom: -2.5px;
+  padding-bottom: 24px;
+  cursor: pointer;
+  border-bottom: 5px solid transparent;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+
+  &.active {
+    pointer-events: none;
+    border-bottom: 5px solid var(--Main, #e44848);
+  }
+}
