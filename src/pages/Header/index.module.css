@@ -2,11 +2,17 @@
   top: 0px;
   position: sticky;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
   padding: 24px 64px;
   border-bottom: 1px solid var(--Badges, #f2f4f7);
   background: var(--Inputs, #f7f7f7);
+}
+
+.headerContent {
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 
   nav {
     display: inline-block;
@@ -23,13 +29,18 @@
   }
 }
 
+.headerHome .headerContent {
+  max-width: unset;
+  margin: unset;
+}
+
+
+
 .headerLogo {
   display: flex;
   align-items: center;
 }
 
-.headerNavItemHome {
-}
+.headerNavItemHome {}
 
-.headerNavItemCatalog {
-}
+.headerNavItemCatalog {}
