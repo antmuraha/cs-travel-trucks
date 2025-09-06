@@ -5,7 +5,7 @@ import { FeaturesBlock } from '@components/FeaturesBlock';
 import { ReviewsBlock } from '@components/ReviewsBlock';
 import { useCurrentTab } from '@hooks/useCurrentTab';
 
-import './index.css';
+import styles from './index.module.css';
 import { featureTab, reviewTab } from '@controls/QueryTabs/constants';
 import { FormBook } from '../../forms/FormBook';
 
@@ -13,8 +13,8 @@ export const CatalogItem = () => {
   const tab = useCurrentTab();
 
   return (
-    <main className="catalog-item">
-      <div className="catalog-content">
+    <main className={styles.catalogItem}>
+      <div className={styles.catalogContent}>
         <CardTruckDetails
           key={item.id}
           to={routes.catalogItem(item.id)}
@@ -29,12 +29,12 @@ export const CatalogItem = () => {
         />
       </div>
       <QueryTabs />
-      <div className="item-details">
-        <div className="details-content">
-          <FeaturesBlock className={tab === featureTab ? 'active' : ''} options={item} />
-          <ReviewsBlock className={tab === reviewTab ? 'active' : ''} />
+      <div className={styles.itemDetails}>
+        <div className={styles.detailsContent}>
+          <FeaturesBlock className={tab === featureTab ? styles.active : ''} options={item} />
+          <ReviewsBlock className={tab === reviewTab ? styles.active : ''} />
         </div>
-        <FormBook className="book-form" />
+        <FormBook className={styles.bookForm} />
       </div>
     </main>
   );

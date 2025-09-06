@@ -23,13 +23,13 @@
   }
 }
 
-.header-logo {
+.headerLogo {
   display: flex;
   align-items: center;
 }
 
-.header-nav-item-home {
+.headerNavItemHome {
 }
 
-.header-nav-item-catalog {
+.headerNavItemCatalog {
 }

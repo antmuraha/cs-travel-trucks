@@ -1,24 +1,24 @@
 import { NavLink } from 'react-router';
 import { Logo } from '@controls/Logo';
 
-import './index.css';
+import styles from './index.module.css';
 import routes from '@constants/routes';
 
 export const Header = () => {
   return (
-    <header className="header">
-      <NavLink className="header-logo" to={routes.home()} aria-label="Logo">
+    <header className={styles.header}>
+      <NavLink className={styles.headerLogo} to={routes.home()} aria-label="Logo">
         <Logo />
       </NavLink>
       <nav>
         <ul>
-          <li className="header-nav-item-home">
-            <NavLink to={routes.home()} className={({ isActive }) => (isActive ? 'active' : '')}>
+          <li className={styles.headerNavItemHome}>
+            <NavLink to={routes.home()} className={({ isActive }) => (isActive ? styles.active : '')}>
               Home
             </NavLink>
           </li>
-          <li className="header-nav-item-catalog">
-            <NavLink to={routes.catalog()} end className={({ isActive }) => (isActive ? 'active' : '')}>
+          <li className={styles.headerNavItemCatalog}>
+            <NavLink to={routes.catalog()} end className={({ isActive }) => (isActive ? styles.active : '')}>
               Catalog
             </NavLink>
           </li>

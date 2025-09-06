@@ -123,3 +123,7 @@ input::placeholder,
 textarea::placeholder {
   color: var(--Gray, #6c717b);
 }
+
+* {
+  /* outline: 1px solid red; */
+}

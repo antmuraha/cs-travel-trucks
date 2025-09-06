@@ -3,16 +3,16 @@ import { Filters } from '@controls/Filters';
 import { CardTruck } from '@components/CardTruck';
 import { Button } from '@controls/Button';
 
-import './index.css';
+import styles from './index.module.css';
 
 export const Catalog = () => {
   const handleLoadMore = () => {};
 
   return (
-    <main className="catalog">
+    <main className={styles.catalog}>
       <Filters />
-      <div className="catalog-content">
-        <div className="catalog-items">
+      <div className={styles.catalogContent}>
+        <div className={styles.catalogItems}>
           {items.map(item => (
             <CardTruck
               key={item.id}
