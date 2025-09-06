@@ -1,11 +1,11 @@
 .queryTabs {
   display: flex;
   gap: 40px;
-  color: var(--Main, #101828);
+  color: var(--secondary);
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  border-bottom: 1px solid var(--Gray-light, #dadde1);
+  border-bottom: 1px solid var(--gray-light);
 }
 
 .queryTab {
@@ -18,6 +18,6 @@
 
   &.active {
     pointer-events: none;
-    border-bottom: 5px solid var(--Main, #e44848);
+    border-bottom: 5px solid var(--favorite);
   }
 }

@@ -1,5 +1,5 @@
 .button {
-  background-color: var(--button-background);
+  background-color: var(--button-bg);
   color: var(--button-color);
   border: none;
   padding: 16px;
@@ -12,5 +12,5 @@
 }
 
 .button:hover {
-  background-color: var(--button-background-hover);
+  background-color: var(--button-bg-hover);
 }

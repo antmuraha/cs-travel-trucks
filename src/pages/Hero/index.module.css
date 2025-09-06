@@ -11,7 +11,7 @@
     url('/images/hero_1440.webp') lightgray 50% 0px / cover no-repeat;
 
   h1 {
-    color: var(--Inputs, #f7f7f7);
+    color: var(--hero-text);
     font-size: 48px;
     font-weight: 600;
     line-height: 32px;
@@ -19,7 +19,7 @@
 
   p {
     margin-top: 16px;
-    color: var(--Inputs, #f7f7f7);
+    color: var(--hero-text);
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;

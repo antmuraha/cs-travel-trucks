@@ -6,36 +6,101 @@
   line-height: 1.5;
 
   /* color-scheme: light dark; */
-  /* color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --white: white;
-  --black: black;
-  --primary-color: #e44848;
-  --primary-hover-color: #d84343;
-  --secondary-color: white;
-  --border-secondary-color: #dadde1;
-  --border-active-color: var(--primary-hover-color);
+  /* Base colors */
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #6c717b;
+  --gray-light: #dadde1;
+  --gray-bg: #f2f4f7;
+  --gray-bg-light: #f7f7f7;
+
+  /* Brand colors */
+  --primary: #e44848;
+  --primary-hover: #d84343;
+  --secondary: #101828;
+
+  /* Border colors */
+  --border-secondary: var(--gray-light);
+  --border-active: var(--primary-hover);
+
+  /* Button colors */
+  --button-bg: var(--primary);
+  --button-bg-hover: var(--primary-hover);
+  --button-color: var(--white);
+
+  /* Text colors */
+  --text-main: var(--secondary);
+  --text-secondary: #475467;
+  --text-muted: var(--gray);
+
+  /* Header colors */
+  --header-bg: var(--gray-bg-light);
+  --header-border: var(--gray-bg);
+  --header-text: var(--white);
+
+  /* Hero colors */
+  --hero-text: var(--gray-bg-light);
+
+  /* Badge, input, and UI colors */
+  --badge: var(--secondary);
+  --badge-bg: var(--gray-bg);
+  --input-bg: var(--gray-bg-light);
+
+  /* Star, rating, and highlight colors */
+  --star: #ffd700;
+
+  /* Misc */
+  --card-bg: #c5c5c5;
+  --favorite: var(--primary);
+
+  /* Transition, border, font */
   --border-radius: 12px;
   --font-size: 16px;
   --line-height: 1.5;
-
-  --button-background: var(--primary-color);
-  --button-background-hover: var(--primary-hover-color);
-  --button-color: var(--white);
-
   --transition-duration: 0.25s;
   --transition-timing-function: ease-in-out;
 }
 
-/* themes */
-
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark-temp) {
   :root {
+    /* Base colors */
+    --white: #18191a;
+    --black: #ffffff;
+    --gray: #b0b3b8;
+    --gray-light: #3a3b3c;
+    --gray-bg: #23272f;
+    --gray-bg-light: #2c2f34;
+
+    /* Brand colors */
+    --secondary: var(--black);
+
+    /* Border colors */
+    --border-secondary: var(--gray-light);
+    --border-active: var(--primary-hover);
+
+    /* Hero colors */
+    --hero-text: var(--black);
+
+    /* Button colors */
+    --button-color: var(--black);
+
+    /* Text colors */
+    --text-main: #f3f6fb;
+    --text-secondary: #b0b3b8;
+    --text-muted: var(--gray);
+
+    /* Badge, input, and UI colors */
+    --badge: var(--white);
+    --badge-bg: #23272f;
+    --input-bg: #23272f;
+
+    /* Misc */
+    --card-bg: #23272f;
   }
 }

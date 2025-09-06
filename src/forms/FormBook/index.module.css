@@ -1,41 +1,40 @@
 .formBook {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-light);
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .subtitle {
+    margin-top: 8px;
+    color: var(--gray);
+    line-height: 24px;
+  }
+
+  .inputs {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    padding: 44px;
-    border-radius: 10px;
-    border: 1px solid var(--Gray-light, #DADDE1);
+    gap: 14px;
 
-    .title {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 24px;
+    label {
+      display: block;
     }
 
-    .subtitle {
-        margin-top: 8px;
-        color: var(--Gray, #6C717B);
-        line-height: 24px;
+    input,
+    textarea {
+      width: 100%;
+      padding: 18px;
     }
+  }
 
-    .inputs {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-
-        label {
-            display: block;
-
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 18px;
-        }
-    }
-
-    button[type="submit"] {
-        align-self: center;
-    }
+  button[type='submit'] {
+    align-self: center;
+  }
 }

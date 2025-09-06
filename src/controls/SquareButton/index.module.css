@@ -13,7 +13,7 @@
   letter-spacing: -0.08px;
   font-weight: 500;
   text-align: center;
-  border: 1px solid var(--Gray-light, #dadde1);
+  border: 1px solid var(--gray-light);
   mix-blend-mode: multiply;
   cursor: pointer;
 
@@ -31,20 +31,20 @@
 }
 
 .squareButton.active {
-  border: 1px solid var(--Button, #e44848);
+  border: 1px solid var(--favorite);
 }
 
 .squareButton:has(input[type='checkbox']:checked),
 .squareButton:has(input[type='radio']:checked) {
-  border: 1px solid var(--Button, #e44848);
+  border: 1px solid var(--favorite);
 }
 
 .squareButton:has(input[type='checkbox']:checked):focus-within,
 .squareButton:has(input[type='radio']:checked):focus-within {
-  outline: 2px solid var(--Button, #e44848);
+  outline: 2px solid var(--favorite);
 }
 
 .squareButton:active,
 .squareButton:hover {
-  background-color: #f2f4f7;
+  background-color: var(--badge-bg);
 }

@@ -1,4 +1,5 @@
-.cardTruckDetails {}
+.cardTruckDetails {
+}
 
 .cardTruckInfo {
   flex: 1;
@@ -31,7 +32,7 @@
   font-weight: 400;
 
   .iconStar {
-    color: var(--color-star, #ffd700);
+    color: var(--star);
   }
 
   .rating {
@@ -62,7 +63,7 @@
   gap: 48px;
   overflow-x: auto;
 
-  &>* {
+  & > * {
     width: 292px;
     height: 312px;
     border-radius: 10px;
@@ -75,7 +76,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
-  color: #475467;
+  color: var(--text-secondary);
 }
 
 .features {

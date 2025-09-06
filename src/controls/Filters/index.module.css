@@ -3,7 +3,7 @@
 
   h3 {
     margin-top: 40px;
-    color: var(--Text, #475467);
+    color: var(--text-secondary);
     font-size: 16px;
     font-weight: 500;
   }

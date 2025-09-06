@@ -1,53 +1,52 @@
 .cardReview {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .header {
+    display: flex;
+    gap: 16px;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: var(--badge-bg);
+    color: var(--favorite);
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .info {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    justify-content: center;
+  }
 
-    .header {
-        display: flex;
-        gap: 16px;
+  .rating {
+    display: flex;
+    gap: 4px;
+
+    .star {
+      color: var(--badge-bg);
+
+      &.active {
+        color: var(--star);
+      }
     }
+  }
 
-    .avatar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        background: var(--Badges, #F2F4F7);
+  h3 {
+    font-weight: 500;
+    line-height: 24px;
+  }
 
-        color: var(--Button, #E44848);
-        font-size: 24px;
-        font-weight: 600;
-    }
-
-    .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .rating {
-        display: flex;
-        gap: 4px;
-
-        .star {
-            color: #F2F4F7;
-
-            &.active {
-                color: #FFC531;
-            }
-        }
-    }
-
-    h3 {
-        font-weight: 500;
-        line-height: 24px;
-    }
-
-    .comment {
-        color: var(--Text, #475467);
-        line-height: 24px;
-    }
+  .comment {
+    color: var(--text-secondary);
+    line-height: 24px;
+  }
 }

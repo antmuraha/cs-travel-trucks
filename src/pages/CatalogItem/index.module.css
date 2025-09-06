@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   gap: 40px;
 
-  &>* {
+  & > * {
     flex: 1;
     flex-basis: 46%;
   }
@@ -21,7 +21,7 @@
 .detailsContent {
   display: grid;
 
-  &>* {
+  & > * {
     grid-area: 1 / 1;
     pointer-events: none;
     opacity: 0;
