@@ -1,24 +1,27 @@
-.catalog-item {
+.catalogItem {
+  max-width: 1440px;
   margin: 0 auto;
   padding: 48px 64px 52px;
   flex-wrap: wrap;
   gap: 64px;
 }
 
-.item-details {
+.itemDetails {
   margin-top: 44px;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 
-  & > * {
+  &>* {
     flex: 1;
+    flex-basis: 46%;
   }
 }
 
-.details-content {
+.detailsContent {
   display: grid;
 
-  & > * {
+  &>* {
     grid-area: 1 / 1;
     pointer-events: none;
     opacity: 0;
@@ -29,4 +32,8 @@
     pointer-events: all;
     opacity: 1;
   }
+}
+
+.tabs {
+  margin-top: 60px;
 }

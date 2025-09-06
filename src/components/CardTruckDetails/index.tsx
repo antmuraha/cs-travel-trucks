@@ -1,4 +1,3 @@
-import { Features } from '@controls/Features';
 import { Icon } from '@controls/Icon';
 import { Image } from '@controls/Image';
 
@@ -13,17 +12,6 @@ export interface CardTruckDetailsProps {
   reviews: number;
   location: string;
   description: string;
-  features: {
-    AC: boolean;
-    bathroom: boolean;
-    kitchen: boolean;
-    TV: boolean;
-    radio: boolean;
-    refrigerator: boolean;
-    microwave: boolean;
-    gas: boolean;
-    water: boolean;
-  };
 }
 
 export const CardTruckDetails = ({
@@ -31,7 +19,6 @@ export const CardTruckDetails = ({
   images,
   price,
   description,
-  features,
   location,
   rating,
   reviews,
@@ -44,14 +31,12 @@ export const CardTruckDetails = ({
       </header>
       <div className={styles.cardTruckInfoDetails}>
         <Icon className={styles.iconStar} name="star" size={16} />
-        <span>{`${rating} (${reviews} Reviews)`}</span>
+        <span className={styles.rating}>{`${rating} (${reviews} Reviews)`}</span>
         <Icon className={styles.iconMap} name="map" size={16} />
         <span>{location}</span>
       </div>
-      <div className="card-truck-price">
-        <div>€{price}</div>
-      </div>
-      <div className="images">
+      <div className={styles.price}>€{price}</div>
+      <div className={styles.images}>
         {images.map((image, index) => (
           <Image
             key={index}
@@ -65,10 +50,7 @@ export const CardTruckDetails = ({
           />
         ))}
       </div>
-      <div className={styles.cardTruckInfo}>
-        <p className={styles.cardTruckInfoDescription}>{description}</p>
-        <Features className={styles.cardTruckInfoFeatures} options={features} />
-      </div>
+      <p className={styles.description}>{description}</p>
     </div>
   );
 };

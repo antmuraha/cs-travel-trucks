@@ -2,7 +2,11 @@ import { useSearchParams } from 'react-router';
 import { defaultTab, featureTab, reviewTab, tabParamName } from './constants';
 import styles from './index.module.css';
 
-export const QueryTabs = () => {
+interface QueryTabsProps {
+  className?: string;
+}
+
+export const QueryTabs = ({ className = '' }: QueryTabsProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const tab = searchParams.get(tabParamName) || defaultTab;
 
@@ -11,7 +15,7 @@ export const QueryTabs = () => {
   };
 
   return (
-    <div className={styles.queryTabs}>
+    <div className={`${styles.queryTabs} ${className}`}>
       <div
         className={`${styles.queryTab} ${tab === featureTab ? styles.active : ''}`}
         onClick={() => handleTabClick(featureTab)}

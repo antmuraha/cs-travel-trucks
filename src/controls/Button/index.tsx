@@ -11,7 +11,7 @@ export interface ButtonProps {
   to?: string;
 }
 
-export const Button = ({ className = '', children, onClick, variant, asNavLink, to }: ButtonProps) => {
+export const Button = ({ type, className = '', children, onClick, variant, asNavLink, to }: ButtonProps) => {
   const buttonClassName = `${styles.button} ${variant === 'secondary' ? styles.secondary : styles.primary}`;
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLButtonElement>) => {
@@ -37,7 +37,7 @@ export const Button = ({ className = '', children, onClick, variant, asNavLink, 
   }
 
   return (
-    <button className={`${buttonClassName} ${className}`} onClick={handleClick}>
+    <button type={type} className={`${buttonClassName} ${className}`} onClick={handleClick}>
       {children}
     </button>
   );

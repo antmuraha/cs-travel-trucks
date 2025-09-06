@@ -22,6 +22,7 @@ body {
 }
 
 svg {
+  font-family: inherit;
   display: inline-block;
 }
 
@@ -60,6 +61,7 @@ dl {
 }
 
 button {
+  font-family: inherit;
   background-color: transparent;
   outline: 1px solid transparent;
   outline-color: transparent;

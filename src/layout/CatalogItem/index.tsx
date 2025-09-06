@@ -14,25 +14,22 @@ export const CatalogItem = () => {
 
   return (
     <main className={styles.catalogItem}>
-      <div className={styles.catalogContent}>
-        <CardTruckDetails
-          key={item.id}
-          to={routes.catalogItem(item.id)}
-          title={item.name}
-          images={item.gallery.map(img => img.thumb)}
-          description={item.description}
-          price={item.price}
-          location={item.location}
-          rating={item.rating}
-          reviews={item.reviews.length}
-          features={item}
-        />
-      </div>
-      <QueryTabs />
+      <CardTruckDetails
+        key={item.id}
+        to={routes.catalogItem(item.id)}
+        title={item.name}
+        images={item.gallery.map(img => img.thumb)}
+        description={item.description}
+        price={item.price}
+        location={item.location}
+        rating={item.rating}
+        reviews={item.reviews.length}
+      />
+      <QueryTabs className={styles.tabs} />
       <div className={styles.itemDetails}>
         <div className={styles.detailsContent}>
           <FeaturesBlock className={tab === featureTab ? styles.active : ''} options={item} />
-          <ReviewsBlock className={tab === reviewTab ? styles.active : ''} />
+          <ReviewsBlock className={tab === reviewTab ? styles.active : ''} reviews={item.reviews} />
         </div>
         <FormBook className={styles.bookForm} />
       </div>
