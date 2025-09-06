@@ -27,6 +27,7 @@
     "baseUrl": "./src/",
     "paths": {
       "@constants/*": ["constants/*"],
+      "@utils/*": ["utils/*"],
       "@layout/*": ["layout/*"],
       "@hooks/*": ["hooks/*"],
       "@controls/*": ["controls/*"],

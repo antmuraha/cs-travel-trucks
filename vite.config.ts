@@ -44,6 +44,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@constants': path.resolve(__dirname, 'src/constants'),
+        '@utils': path.resolve(__dirname, 'src/utils'),
         '@layout': path.resolve(__dirname, 'src/layout'),
         '@hooks': path.resolve(__dirname, 'src/hooks'),
         '@controls': path.resolve(__dirname, 'src/controls'),
