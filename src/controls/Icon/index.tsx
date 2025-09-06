@@ -37,9 +37,10 @@ export interface IconProps {
   size?: number; // in px
   width?: number; // in px
   height?: number; // in px
+  onClick?: () => void;
 }
 
-export const Icon = ({ className, name, title, size = 24, width, height }: IconProps) => {
+export const Icon = ({ className, name, title, size = 24, width, height, onClick }: IconProps) => {
   const iconClassName = `${styles.icon} ${className || ''}`;
 
   const IconComponent = icons[name];
@@ -47,7 +48,7 @@ export const Icon = ({ className, name, title, size = 24, width, height }: IconP
   const iconStyle = { width: width || size, height: height || size };
 
   return (
-    <span className={iconClassName} title={title} style={iconStyle}>
+    <span className={iconClassName} title={title} style={iconStyle} onClick={onClick}>
       <IconComponent style={iconStyle} />
     </span>
   );

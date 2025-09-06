@@ -1,0 +1,14 @@
+.favoritesIcon {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform var(--transition-duration) var(--transition-timing-function);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &.favorited {
+        color: #E44848;
+        transform: scale(1);
+    }
+}

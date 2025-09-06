@@ -1,10 +1,12 @@
 import { Icon } from '@controls/Icon';
 import { Image } from '@controls/Image';
+import { FavoriteIcon } from '@components/FavoriteIcon';
 
 import styles from './index.module.css';
 
 export interface CardTruckDetailsProps {
   to: string;
+  id: number | string;
   title: string;
   images: string[];
   price: number;
@@ -15,6 +17,7 @@ export interface CardTruckDetailsProps {
 }
 
 export const CardTruckDetails = ({
+  id,
   title,
   images,
   price,
@@ -27,7 +30,7 @@ export const CardTruckDetails = ({
     <div className={styles.cardTruckDetails}>
       <header className={styles.cardTruckInfoHeader}>
         <h1>{title}</h1>
-        <Icon name="heart" size={24} />
+        <FavoriteIcon id={id} />
       </header>
       <div className={styles.cardTruckInfoDetails}>
         <Icon className={styles.iconStar} name="star" size={16} />

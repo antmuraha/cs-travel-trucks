@@ -7,6 +7,7 @@ import { Image } from '@controls/Image';
 import styles from './index.module.css';
 import useViewTransition from '@hooks/useViewTransition';
 import routes from '@constants/routes';
+import { FavoriteIcon } from '@components/FavoriteIcon';
 
 export interface CardTruckProps {
   id: number | string;
@@ -63,7 +64,7 @@ export const CardTruck = ({
           <h2>{title}</h2>
           <div className="flex" />
           <div>€{price}</div>
-          <Icon name="heart" size={24} />
+          <FavoriteIcon id={id} />
         </div>
         <div className={styles.cardTruckInfoDetails}>
           <Icon className={styles.iconStar} name="star" size={16} />

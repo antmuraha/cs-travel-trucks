@@ -16,6 +16,7 @@ export const CatalogItem = () => {
     <main className={styles.catalogItem}>
       <CardTruckDetails
         key={item.id}
+        id={item.id}
         to={routes.catalogItem(item.id)}
         title={item.name}
         images={item.gallery.map(img => img.thumb)}

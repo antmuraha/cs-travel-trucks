@@ -16,6 +16,7 @@ type Story = StoryObj<typeof meta>;
 export const ChipWithIcon: Story = {
   args: {
     to: '/trucks/mavericks',
+    id: 1,
     title: 'Mavericks',
     description: 'Embrace simplicity and freedom with the Mavericks panel truck. And enjoy the ride!',
     images: ['https://ftp.goit123.study/img/campers-test-task/1-1.webp'],
