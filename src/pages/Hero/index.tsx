@@ -1,4 +1,4 @@
-import { Button } from '../Button';
+import { Button } from '../../controls/Button';
 
 import styles from './index.module.css';
 

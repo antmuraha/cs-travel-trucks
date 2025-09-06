@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 import routes from '@constants/routes';
-import { Header } from '@layout/Header';
-import { Catalog } from '@layout/Catalog';
-import { CatalogItem } from '@layout/CatalogItem';
+import { Header } from '@pages/Header';
+import { Hero } from '@pages/Hero';
+import { Catalog } from '@pages/Catalog';
+import { CatalogItem } from '@pages/CatalogItem';
 import ViewTransitionWrapper from '@components/ViewTransitionWrapper';
-import { Hero } from '@controls/Hero';
 
 import './App.css';
 
