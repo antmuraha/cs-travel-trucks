@@ -33,6 +33,10 @@
   --button-bg: var(--primary);
   --button-bg-hover: var(--primary-hover);
   --button-color: var(--white);
+  --button-bg-secondary: var(--white);
+  --button-bg-secondary-hover: var(--gray-bg);
+  --button-color-secondary: var(--secondary);
+  --button-border-secondary: var(--gray-light);
 
   /* Text colors */
   --text-main: var(--secondary);

@@ -7,20 +7,20 @@ import styles from './index.module.css';
 
 const equipmentOptions = [
   { label: 'AC', value: 'AC', icon: 'wind' },
-  { label: 'Automatic', value: 'Automatic', icon: 'diagram' },
-  { label: 'Kitchen', value: 'Kitchen', icon: 'cupHot' },
+  { label: 'Automatic', value: 'microwave', icon: 'diagram' },
+  { label: 'Kitchen', value: 'kitchen', icon: 'cupHot' },
   { label: 'TV', value: 'TV', icon: 'tv' },
-  { label: 'Bathroom', value: 'Bathroom', icon: 'shower' },
+  { label: 'Bathroom', value: 'bathroom', icon: 'shower' },
 ];
 
 const vehicleTypes = [
-  { label: 'Van', value: 'van', icon: 'grid1x2' },
-  { label: 'Fully Integrated', value: 'fully-integrated', icon: 'grid2x2' },
+  { label: 'Van', value: 'panelTruck', icon: 'grid1x2' },
+  { label: 'Fully Integrated', value: 'fullyIntegrated', icon: 'grid2x2' },
   { label: 'Alcove', value: 'alcove', icon: 'grid3x3' },
 ];
 
 export const Filters = () => {
-  const { currentEquipments, location, selectedForm, setCurrentEquipments, setSearchParams } = useCatalogFilters();
+  const { currentEquipments, location, form, setCurrentEquipments, setSearchParams } = useCatalogFilters();
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = event.target;
@@ -39,9 +39,11 @@ export const Filters = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
+    const location = formData.get('location');
     const form = formData.get('form');
 
     setSearchParams({
+      location: typeof location === 'string' ? location : '',
       form: typeof form === 'string' ? form : '',
       equipments: currentEquipments.join(','),
     });
@@ -77,14 +79,14 @@ export const Filters = () => {
         <div className={styles.options}>
           {vehicleTypes.map(({ label, value, icon }) => (
             <SquareButton
-              key={`${value}-${selectedForm}`}
+              key={`${value}-${form}`}
               type="radio"
               name="form"
               label={label}
               value={value}
               // @ts-expect-error TODO
               icon={icon}
-              checked={selectedForm === value}
+              checked={form === value}
             />
           ))}
         </div>

@@ -6,12 +6,13 @@ export interface ButtonProps {
   className?: string;
   children?: React.ReactNode;
   variant?: 'primary' | 'secondary';
+  disabled?: boolean;
   onClick?: () => void;
   asNavLink?: boolean;
   to?: string;
 }
 
-export const Button = ({ type, className = '', children, onClick, variant, asNavLink, to }: ButtonProps) => {
+export const Button = ({ type, className = '', children, onClick, variant, disabled, asNavLink, to }: ButtonProps) => {
   const buttonClassName = `${styles.button} ${variant === 'secondary' ? styles.secondary : styles.primary}`;
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLButtonElement>) => {
@@ -37,7 +38,7 @@ export const Button = ({ type, className = '', children, onClick, variant, asNav
   }
 
   return (
-    <button type={type} className={`${buttonClassName} ${className}`} onClick={handleClick}>
+    <button type={type} className={`${buttonClassName} ${className}`} disabled={disabled} onClick={handleClick}>
       {children}
     </button>
   );

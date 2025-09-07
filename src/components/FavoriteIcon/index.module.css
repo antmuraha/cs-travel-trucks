@@ -1,13 +1,17 @@
 .favoritesIcon {
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform var(--transition-duration) var(--transition-timing-function);
+  display: flex;
 
-  &:hover {
-    transform: scale(1.1);
+  svg {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform var(--transition-duration) var(--transition-timing-function);
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
-  &.favorited {
+  &.favorited svg {
     color: var(--favorite);
     transform: scale(1);
   }

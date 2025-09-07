@@ -64,6 +64,7 @@
   overflow-x: auto;
 
   & > * {
+    object-fit: cover;
     width: 292px;
     height: 312px;
     border-radius: 10px;

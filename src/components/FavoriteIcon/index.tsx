@@ -13,15 +13,10 @@ export const FavoriteIcon = ({ id, size = 24, className }: FavoriteIconProps) =>
   const { isFavorite, toggleFavorite } = useLocalFavorite(id);
 
   return (
-    <div>
+    <div className={`${styles.favoritesIcon} ${className} ${isFavorite ? styles.favorited : ''}`}>
+      <Icon name="heart" size={size} onClick={toggleFavorite} />
       {/* @ts-expect-error Custom Web Component */}
-      {<click-spark style={{ '--click-spark-color': isFavorite ? '#E44848' : 'transparent' }}></click-spark>}
-      <Icon
-        name="heart"
-        size={size}
-        className={`${styles.favoritesIcon} ${className} ${isFavorite ? styles.favorited : ''}`}
-        onClick={toggleFavorite}
-      />
+      {<click-spark style={{ '--click-spark-color': isFavorite ? 'var(--primary)' : 'transparent' }}></click-spark>}
     </div>
   );
 };
