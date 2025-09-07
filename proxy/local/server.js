@@ -8,6 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.get('/', proxy);
 app.get('/:path', proxy);
+app.get('/:path/:id', proxy);
 
 const PORT = 3000;
 app.listen(PORT, () => {
