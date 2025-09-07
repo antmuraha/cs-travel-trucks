@@ -1,8 +1,20 @@
 import { Features } from '@controls/Features';
 import styles from './index.module.css';
 
+const formMap: Record<string, string> = {
+  panelTruck: 'Panel Truck',
+  alcove: 'Alcove',
+  fullyIntegrated: 'Fully Integrated',
+};
+
 interface FeaturesBlockProps {
   className?: string;
+  form: string;
+  length: string;
+  width: string;
+  height: string;
+  tank: string;
+  consumption: string;
   options: {
     AC: boolean;
     bathroom: boolean;
@@ -16,7 +28,16 @@ interface FeaturesBlockProps {
   };
 }
 
-export const FeaturesBlock = ({ className, options }: FeaturesBlockProps) => {
+export const FeaturesBlock = ({
+  className,
+  options,
+  form,
+  length,
+  width,
+  height,
+  tank,
+  consumption,
+}: FeaturesBlockProps) => {
   return (
     <div className={`${styles.featuresBlock} ${className}`}>
       <Features options={options} />
@@ -25,22 +46,22 @@ export const FeaturesBlock = ({ className, options }: FeaturesBlockProps) => {
         <div className="delimiter" />
         <dl>
           <dt>Form</dt>
-          <dd>Tesla</dd>
+          <dd>{formMap[form] || form}</dd>
 
           <dt>Length</dt>
-          <dd>Model S</dd>
+          <dd>{length}</dd>
 
           <dt>Width</dt>
-          <dd>2020</dd>
+          <dd>{width}</dd>
 
           <dt>Height</dt>
-          <dd>Model S</dd>
+          <dd>{height}</dd>
 
           <dt>Tank</dt>
-          <dd>100l</dd>
+          <dd>{tank}</dd>
 
           <dt>Consumption</dt>
-          <dd>12.4l/100km</dd>
+          <dd>{consumption}</dd>
         </dl>
       </section>
     </div>

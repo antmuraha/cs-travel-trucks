@@ -39,7 +39,16 @@ export const CatalogItem = () => {
           <QueryTabs className={styles.tabs} />
           <div className={styles.itemDetails}>
             <div className={styles.detailsContent}>
-              <FeaturesBlock className={tab === featureTab ? styles.active : ''} options={item} />
+              <FeaturesBlock
+                className={tab === featureTab ? styles.active : ''}
+                options={item}
+                form={item.form}
+                length={item.length}
+                width={item.width}
+                height={item.height}
+                tank={item.tank}
+                consumption={item.consumption}
+              />
               <ReviewsBlock className={tab === reviewTab ? styles.active : ''} reviews={item.reviews} />
             </div>
             <FormBook className={styles.bookForm} />
