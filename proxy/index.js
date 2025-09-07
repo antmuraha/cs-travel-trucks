@@ -1,9 +1,10 @@
 const SECRET_SLUG = process.env.SECRET_SLUG;
+const DOMAIN = process.env.DOMAIN;
 
 export const proxy = async (req, res) => {
   res.set(
     'Access-Control-Allow-Origin',
-    process.env.NODE_ENV === 'production' ? 'https://cs-travel-trucks-black.vercel.app' : '*'
+    process.env.NODE_ENV === 'production' ? DOMAIN : '*'
   );
   res.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.set('Access-Control-Allow-Headers', 'Content-Type');
