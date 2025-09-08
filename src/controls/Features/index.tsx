@@ -3,11 +3,25 @@ import { Chip } from '../Chip';
 
 import styles from './index.module.css';
 
-const list = ['AC', 'bathroom', 'kitchen', 'TV', 'radio', 'refrigerator', 'microwave', 'gas', 'water'];
+const list = [
+  'AC',
+  'bathroom',
+  'kitchen',
+  'TV',
+  'radio',
+  'refrigerator',
+  'microwave',
+  'gas',
+  'water',
+  'transmission',
+  'engine',
+];
 
 interface FeaturesProps {
   className?: string;
   options: {
+    transmission: string;
+    engine: string;
     AC: boolean;
     bathroom: boolean;
     kitchen: boolean;
@@ -29,9 +43,15 @@ export const Features = ({ className, options }: FeaturesProps) => {
 
         if (!iconName) return null;
 
+        let label: string = feature;
+
+        if (feature === 'transmission' || feature === 'engine') {
+          label = options[feature];
+        }
+
         return (
           <li key={feature}>
-            <Chip icon={iconName} label={feature} />
+            <Chip icon={iconName} label={label} />
           </li>
         );
       })}

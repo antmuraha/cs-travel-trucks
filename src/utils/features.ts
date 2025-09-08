@@ -10,16 +10,20 @@ export function getIconNameByFeature(feature: string): keyof typeof icons | null
       return 'cupHot';
     case 'TV':
       return 'tv';
-    // case 'radio':
-    //   return 'radio';
-    // case 'refrigerator':
-    //   return 'refrigerator';
+    case 'radio':
+      return 'radio';
+    case 'refrigerator':
+      return 'refrigerator';
     case 'microwave':
-      return 'diagram';
-    // case 'gas':
-    //   return 'gas';
-    // case 'water':
-    //   return 'water';
+      return 'microwave';
+    case 'gas':
+      return 'gas';
+    case 'water':
+      return 'water';
+    case 'transmission':
+      return 'transmission';
+    case 'engine':
+      return 'engine';
     default:
       return null;
   }

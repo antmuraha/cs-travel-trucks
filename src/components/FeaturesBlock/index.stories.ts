@@ -22,6 +22,8 @@ export const Default: Story = {
     width: '2.2',
     tank: '100',
     options: {
+      transmission: 'manual',
+      engine: 'V8',
       AC: true,
       bathroom: true,
       gas: true,

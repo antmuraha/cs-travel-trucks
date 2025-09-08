@@ -16,6 +16,8 @@ interface FeaturesBlockProps {
   tank: string;
   consumption: string;
   options: {
+    transmission: string;
+    engine: string;
     AC: boolean;
     bathroom: boolean;
     kitchen: boolean;

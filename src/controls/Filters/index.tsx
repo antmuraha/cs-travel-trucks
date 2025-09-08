@@ -7,7 +7,7 @@ import styles from './index.module.css';
 
 const equipmentOptions = [
   { label: 'AC', value: 'AC', icon: 'wind' },
-  { label: 'Automatic', value: 'microwave', icon: 'diagram' },
+  { label: 'Microwave', value: 'microwave', icon: 'microwave' },
   { label: 'Kitchen', value: 'kitchen', icon: 'cupHot' },
   { label: 'TV', value: 'TV', icon: 'tv' },
   { label: 'Bathroom', value: 'bathroom', icon: 'shower' },

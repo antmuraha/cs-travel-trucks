@@ -30,6 +30,8 @@ export const ChipWithIcon: Story = {
     title: 'Mavericks',
     description: 'Embrace simplicity and freedom with the Mavericks panel truck. And enjoy the ride!',
     features: {
+      transmission: 'manual',
+      engine: 'V8',
       AC: true,
       bathroom: true,
       gas: true,

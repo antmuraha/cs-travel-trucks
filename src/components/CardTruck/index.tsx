@@ -20,6 +20,8 @@ export interface CardTruckProps {
   location: string;
   description: string;
   features: {
+    transmission: string;
+    engine: string;
     AC: boolean;
     bathroom: boolean;
     kitchen: boolean;

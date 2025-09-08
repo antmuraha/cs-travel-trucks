@@ -4,14 +4,21 @@ import IconLogo from '../../assets/icons/logo.svg';
 
 import IconCupHot from '../../assets/icons/cup-hot.svg?sprite=inline';
 import IconDiagram from '../../assets/icons/diagram.svg?sprite=inline';
+import IconEngine from '../../assets/icons/engine.svg?sprite=inline';
+import IconFridge from '../../assets/icons/fridge.svg?sprite=inline';
+import IconGas from '../../assets/icons/gas.svg?sprite=inline';
 import IconGrid1x2 from '../../assets/icons/grid-1x2.svg?sprite=inline';
 import IconGrid2x2 from '../../assets/icons/grid-2x2.svg?sprite=inline';
 import IconGrid3x3 from '../../assets/icons/grid-3x3.svg?sprite=inline';
 import IconHeart from '../../assets/icons/heart.svg?sprite=inline';
 import IconMap from '../../assets/icons/map.svg?sprite=inline';
+import IconMicrowave from '../../assets/icons/microwave.svg?sprite=inline';
+import IconRadio from '../../assets/icons/radio.svg?sprite=inline';
 import IconShower from '../../assets/icons/shower.svg?sprite=inline';
 import IconStar from '../../assets/icons/star.svg?sprite=inline';
+import IconTransmission from '../../assets/icons/transmission.svg?sprite=inline';
 import IconTv from '../../assets/icons/tv.svg?sprite=inline';
+import IconWater from '../../assets/icons/water.svg?sprite=inline';
 import IconWind from '../../assets/icons/wind.svg?sprite=inline';
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -19,14 +26,21 @@ export const icons = {
   logo: IconLogo,
   cupHot: IconCupHot,
   diagram: IconDiagram,
+  engine: IconEngine,
+  refrigerator: IconFridge,
+  gas: IconGas,
   grid1x2: IconGrid1x2,
   grid2x2: IconGrid2x2,
   grid3x3: IconGrid3x3,
   heart: IconHeart,
   map: IconMap,
+  microwave: IconMicrowave,
+  radio: IconRadio,
   shower: IconShower,
   star: IconStar,
+  transmission: IconTransmission,
   tv: IconTv,
+  water: IconWater,
   wind: IconWind,
 };
 
