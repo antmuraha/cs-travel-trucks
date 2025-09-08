@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const BASE_URL = import.meta.env.MODE !== 'production' ? 'http://localhost:3000' : import.meta.env.VITE_APP_BASE_API;
 
 export interface FetchError {
@@ -13,29 +15,36 @@ class Client {
   }
   async get(path: string) {
     try {
-      const response = await fetch(`${this.#baseUrl}${path}`);
-      if (!response.ok) {
-        throw new Error(`${await response.text()}`);
-      }
-      return response.json();
+      const response = await axios.get(`${this.#baseUrl}${path}`);
+      return response.data;
     } catch (error) {
-      const message = error instanceof Error ? error.message : 'Unknown error';
+      let message = 'Unknown error';
+      if (axios.isAxiosError(error)) {
+        message = error.response?.data?.message || error.message;
+      } else if (error instanceof Error) {
+        message = error.message;
+      }
       throw { status: 'error', message } as FetchError;
     }
   }
+
   async post(path: string, body: Record<string, unknown> | FormData) {
     try {
-      const response = await fetch(`${this.#baseUrl}${path}`, {
-        method: 'POST',
-        body: body instanceof FormData ? body : JSON.stringify(body),
-        headers: body instanceof FormData ? {} : { 'Content-Type': 'application/json' },
-      });
-      if (!response.ok) {
-        throw new Error(`${await response.text()}`);
+      let config = {};
+      let data: Record<string, unknown> | FormData | string = body;
+      if (!(body instanceof FormData)) {
+        config = { headers: { 'Content-Type': 'application/json' } };
+        data = JSON.stringify(body);
       }
-      return response.json();
+      const response = await axios.post(`${this.#baseUrl}${path}`, data, config);
+      return response.data;
     } catch (error) {
-      const message = error instanceof Error ? error.message : 'Unknown error';
+      let message = 'Unknown error';
+      if (axios.isAxiosError(error)) {
+        message = error.response?.data?.message || error.message;
+      } else if (error instanceof Error) {
+        message = error.message;
+      }
       throw { status: 'error', message } as FetchError;
     }
   }
