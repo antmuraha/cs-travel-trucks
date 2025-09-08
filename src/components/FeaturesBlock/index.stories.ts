@@ -15,6 +15,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    consumption: '10',
+    form: 'manual',
+    height: '2.5',
+    length: '6',
+    width: '2.2',
+    tank: '100',
     options: {
       AC: true,
       bathroom: true,
