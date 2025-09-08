@@ -28,4 +28,12 @@
   .button {
     margin-top: 40px;
   }
+
+  @media screen and (max-width: 768px) {
+    padding-left: 40px;
+
+    h1 {
+      line-height: 50px;
+    }
+  }
 }

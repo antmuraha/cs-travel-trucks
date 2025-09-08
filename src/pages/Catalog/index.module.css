@@ -6,6 +6,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 64px;
+
+  @media screen and (max-width: 768px) {
+    padding: 24px;
+    gap: 24px;
+  }
 }
 
 .catalogContent {

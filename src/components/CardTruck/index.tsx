@@ -63,8 +63,10 @@ export const CardTruck = ({
         <div className={styles.cardTruckInfoHeader}>
           <h2>{title}</h2>
           <div className="flex" />
-          <div>€{price}</div>
-          <FavoriteIcon id={id} />
+          <div className={styles.headerRight}>
+            <div className={styles.price}>€{price}</div>
+            <FavoriteIcon id={id} className={styles.favoriteIcon} />
+          </div>
         </div>
         <div className={styles.cardTruckInfoDetails}>
           <Icon className={styles.iconStar} name="star" size={16} />

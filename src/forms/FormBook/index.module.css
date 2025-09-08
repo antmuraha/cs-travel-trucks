@@ -6,6 +6,10 @@
   border-radius: 10px;
   border: 1px solid var(--gray-light);
 
+  @media screen and (max-width: 768px) {
+    padding: 24px;
+  }
+
   .title {
     font-size: 20px;
     font-weight: 600;

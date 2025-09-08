@@ -30,4 +30,8 @@
       margin-bottom: 16px;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 24px;
+  }
 }

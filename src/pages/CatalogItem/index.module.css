@@ -3,17 +3,25 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 48px 64px 52px;
-  flex-wrap: wrap;
-  gap: 64px;
+
+  @media screen and (max-width: 768px) {
+    padding: 24px 24px 52px;
+  }
 }
 
 .itemDetails {
   margin-top: 44px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
 
-  & > * {
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &>* {
     flex: 1;
     flex-basis: 46%;
   }
@@ -22,7 +30,7 @@
 .detailsContent {
   display: grid;
 
-  & > * {
+  &>* {
     grid-area: 1 / 1;
     pointer-events: none;
     opacity: 0;

@@ -63,6 +63,10 @@
   gap: 48px;
   overflow-x: auto;
 
+  @media screen and (max-width: 768px) {
+    gap: 24px;
+  }
+
   & > * {
     object-fit: cover;
     width: 292px;

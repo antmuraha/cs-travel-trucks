@@ -5,6 +5,10 @@
   padding: 24px 64px;
   border-bottom: 1px solid var(--header-border);
   background: var(--header-bg);
+
+  @media screen and (max-width: 768px) {
+    padding: 12px 32px;
+  }
 }
 
 .headerContent {
@@ -27,6 +31,12 @@
       color: var(--primary);
     }
   }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      display: none;
+    }
+  }
 }
 
 .headerHome .headerContent {
@@ -39,8 +49,6 @@
   align-items: center;
 }
 
-.headerNavItemHome {
-}
+.headerNavItemHome {}
 
-.headerNavItemCatalog {
-}
+.headerNavItemCatalog {}

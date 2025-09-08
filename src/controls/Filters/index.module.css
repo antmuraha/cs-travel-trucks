@@ -1,6 +1,10 @@
 .filters {
   width: 360px;
 
+  @media screen and (max-width: 768px) {
+    width: unset;
+  }
+
   h3 {
     margin-top: 40px;
     color: var(--text-secondary);
@@ -21,5 +25,12 @@
 
   .searchButton {
     margin-top: 40px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 24px;
+      position: relative;
+      left: 50%;
+      margin-left: -25%;
+    }
   }
 }
