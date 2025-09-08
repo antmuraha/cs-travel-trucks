@@ -5,7 +5,23 @@
       "form_factor": "wide"
     },
     {
+      "src": "/screenshots/desktop-catalog.png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/desktop-details.png",
+      "form_factor": "wide"
+    },
+    {
       "src": "/screenshots/mobile-home.png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshots/mobile-catalog.png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshots/mobile-details.png",
       "form_factor": "narrow"
     }
   ]
