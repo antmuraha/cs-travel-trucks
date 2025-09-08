@@ -20,7 +20,7 @@ class Client {
     } catch (error) {
       let message = 'Unknown error';
       if (axios.isAxiosError(error)) {
-        message = error.response?.data?.message || error.message;
+        message = error.response?.data || error.message;
       } else if (error instanceof Error) {
         message = error.message;
       }
