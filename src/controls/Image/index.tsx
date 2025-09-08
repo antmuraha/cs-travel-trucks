@@ -7,9 +7,18 @@ export interface ImageProps {
   className?: string;
   styles?: React.CSSProperties;
   lazy?: boolean;
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
-export const Image = ({ alt, title, src, className, styles: imageStyles, lazy = true }: ImageProps) => {
+export const Image = ({
+  alt,
+  title,
+  src,
+  className,
+  styles: imageStyles,
+  lazy = true,
+  fetchPriority = 'auto',
+}: ImageProps) => {
   return (
     <img
       className={`${styles.image} ${className}`}
@@ -17,6 +26,7 @@ export const Image = ({ alt, title, src, className, styles: imageStyles, lazy = 
       alt={alt}
       title={title}
       loading={lazy ? 'lazy' : 'eager'}
+      fetchPriority={fetchPriority}
       style={imageStyles}
     />
   );

@@ -1,3 +1,4 @@
+import useIsMobile from '@hooks/useIsMobile';
 import { Icon } from '@controls/Icon';
 import { Image } from '@controls/Image';
 import { FavoriteIcon } from '@components/FavoriteIcon';
@@ -26,6 +27,8 @@ export const CardTruckDetails = ({
   rating,
   reviews,
 }: CardTruckDetailsProps) => {
+  const isMobile = useIsMobile();
+
   return (
     <div className={styles.cardTruckDetails}>
       <header className={styles.cardTruckInfoHeader}>
@@ -50,6 +53,7 @@ export const CardTruckDetails = ({
             title={title}
             src={image}
             lazy={false}
+            fetchPriority={isMobile ? (index === 0 ? 'high' : 'low') : 'high'}
           />
         ))}
       </div>
