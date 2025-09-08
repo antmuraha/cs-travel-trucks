@@ -1,27 +1,27 @@
 {
   "screenshots": [
     {
-      "src": "/screenshots/desktop-home.png",
+      "src": "/screenshots/desktop-home.jpg",
       "form_factor": "wide"
     },
     {
-      "src": "/screenshots/desktop-catalog.png",
+      "src": "/screenshots/desktop-catalog.jpg",
       "form_factor": "wide"
     },
     {
-      "src": "/screenshots/desktop-details.png",
+      "src": "/screenshots/desktop-details.jpg",
       "form_factor": "wide"
     },
     {
-      "src": "/screenshots/mobile-home.png",
+      "src": "/screenshots/mobile-home.jpg",
       "form_factor": "narrow"
     },
     {
-      "src": "/screenshots/mobile-catalog.png",
+      "src": "/screenshots/mobile-catalog.jpg",
       "form_factor": "narrow"
     },
     {
-      "src": "/screenshots/mobile-details.png",
+      "src": "/screenshots/mobile-details.jpg",
       "form_factor": "narrow"
     }
   ]
