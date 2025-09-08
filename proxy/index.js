@@ -2,11 +2,8 @@ const SECRET_SLUG = process.env.SECRET_SLUG;
 const DOMAIN = process.env.DOMAIN;
 
 export const proxy = async (req, res) => {
-  res.set(
-    'Access-Control-Allow-Origin',
-    process.env.NODE_ENV === 'production' ? DOMAIN : '*'
-  );
-  res.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.set('Access-Control-Allow-Origin', process.env.NODE_ENV === 'production' ? DOMAIN : '*');
+  res.set('Access-Control-Allow-Methods', 'GET, OPTIONS, POST');
   res.set('Access-Control-Allow-Headers', 'Content-Type');
   res.set('Accept-Version', 'v1');
 
@@ -18,6 +15,16 @@ export const proxy = async (req, res) => {
   try {
     const url = req.url;
     const method = req.method;
+
+    // Dummy: POST /bookings with delay to simulate booking handling
+    if (method === 'POST' && url === '/bookings') {
+      // Here you would normally handle the booking logic,
+      // e.g., save to a database or send an email.
+      console.log('Received booking request:', req.body);
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate delay
+      res.status(200).json({ message: 'Booking request received successfully!' });
+      return;
+    }
 
     const urlApi = `https://${SECRET_SLUG}.mockapi.io${url}`;
 

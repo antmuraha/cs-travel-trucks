@@ -44,6 +44,7 @@ export default defineConfig(({ mode }) => {
   return {
     resolve: {
       alias: {
+        '@libs': path.resolve(__dirname, 'src/libs'),
         '@redux': path.resolve(__dirname, 'src/redux'),
         '@constants': path.resolve(__dirname, 'src/constants'),
         '@utils': path.resolve(__dirname, 'src/utils'),

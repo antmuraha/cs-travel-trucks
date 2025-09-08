@@ -23,6 +23,22 @@ class Client {
       throw { status: 'error', message } as FetchError;
     }
   }
+  async post(path: string, body: Record<string, unknown> | FormData) {
+    try {
+      const response = await fetch(`${this.#baseUrl}${path}`, {
+        method: 'POST',
+        body: body instanceof FormData ? body : JSON.stringify(body),
+        headers: body instanceof FormData ? {} : { 'Content-Type': 'application/json' },
+      });
+      if (!response.ok) {
+        throw new Error(`${await response.text()}`);
+      }
+      return response.json();
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Unknown error';
+      throw { status: 'error', message } as FetchError;
+    }
+  }
 }
 
 export default new Client(BASE_URL);
