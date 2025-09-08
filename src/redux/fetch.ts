@@ -9,7 +9,6 @@ const fetchCatalogList = createAsyncThunk(
       const { filters, limit } = options;
       const url = filters ? `/campers?page=1&limit=${limit}&${filters}` : `/campers?page=1&limit=${limit}`;
       const response = await client.get(url);
-      console.log('response', response);
       return response as { items: CatalogItem[]; total: number };
     } catch (error: unknown) {
       if (error && typeof error === 'object' && 'message' in error) {
@@ -37,10 +36,8 @@ const fetchCatalogListMore = createAsyncThunk(
 const fetchCatalogItem = createAsyncThunk('catalog/fetchById', async (id: string | number, thunkAPI) => {
   try {
     const response = await client.get(`/campers/${id}`);
-    console.log('111111111ERRRRRRRr', response);
     return response as CatalogItem;
   } catch (error: unknown) {
-    console.log('111111111error', error);
     if (error && typeof error === 'object' && 'message' in error) {
       return thunkAPI.rejectWithValue((error as { message: string }).message);
     }
