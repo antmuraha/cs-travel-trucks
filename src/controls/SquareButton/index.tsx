@@ -32,7 +32,7 @@ export const SquareButton = ({
     if (type === 'radio' && ref.current?.checked) {
       // Functionality responsible for deselecting the radio button
       const keyboardEvent = event as React.KeyboardEvent<HTMLLabelElement>;
-      console.log('keyboardEvent.key', keyboardEvent.key);
+
       if (event.type === 'keydown' && keyboardEvent.key !== 'Spacebar') {
         return;
       }
