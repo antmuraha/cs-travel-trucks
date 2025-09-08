@@ -34,6 +34,19 @@
     }
   }
 
+  .error {
+    height: 0px;
+    color: var(--primary);
+    font-size: 12px;
+    opacity: 0;
+    transition: height 0.2s ease, opacity 0.2s ease;
+
+    &.errorVisible {
+      height: 12px;
+      opacity: 1;
+    }
+  }
+
   button[type='submit'] {
     align-self: center;
   }
