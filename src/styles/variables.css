@@ -5,7 +5,7 @@
   font-style: normal;
   line-height: 1.5;
 
-  /* color-scheme: light dark; */
+  color-scheme: light dark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -71,7 +71,7 @@
   --transition-timing-function: ease-in-out;
 }
 
-@media (prefers-color-scheme: dark-temp) {
+@media (prefers-color-scheme: dark) {
   :root {
     /* Base colors */
     --white: #18191a;
