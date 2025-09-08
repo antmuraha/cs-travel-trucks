@@ -4,7 +4,7 @@
   gap: 8px;
   padding: 12px 18px;
   border-radius: 50px;
-  /* color: var(--secondary); */
+  color: var(--secondary);
   background: var(--badge-bg);
   font-weight: 500;
   text-transform: capitalize;
@@ -12,6 +12,15 @@
 
   border: none;
   outline: none;
+
+  /* @dark-theme */
+  @media (prefers-color-scheme: dark) {
+    mix-blend-mode: plus-lighter;
+
+    svg {
+      color: var(--secondary);
+    }
+  }
 }
 
 .chip:hover {
