@@ -5,7 +5,6 @@ footprint. This project is ideal as a quick start template for new React/Vite pr
 
 ## 🌐 Live Demo
 
-- **App:** [https://cs-travel-trucks-black.vercel.app/](https://cs-travel-trucks-black.vercel.app/)
 - **Storybook:** [https://antmuraha.github.io/cs-travel-trucks/](https://antmuraha.github.io/cs-travel-trucks/)
 
 ## 📲 Install as a PWA
